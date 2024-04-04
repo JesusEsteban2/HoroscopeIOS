@@ -14,6 +14,14 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    //Llamada a 2 pantalla y paso de parámetros.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier=="conec12") {
+            let secondViewControler = segue.destination as? SecondViewController
+            secondViewControler?.param1="Hello Word"
+
+        }
+    }
 
 }
 
