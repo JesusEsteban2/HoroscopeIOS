@@ -8,13 +8,12 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    private var fila:Int
+    private var fila:Int = 0
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let model = horoArray[indexPath.row]
         print("CELL: \(model.nombre)")
         fila=indexPath.row
-        
         }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

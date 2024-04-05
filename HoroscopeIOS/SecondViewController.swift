@@ -9,7 +9,7 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
-    var param1:String=""
+    var param1:Horoscope?=nil
     
     @IBOutlet weak var hola: UILabel!
     
@@ -18,7 +18,8 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        hola.text=param1
+        hola.text=param1?.nombre
+        
     }
     
 

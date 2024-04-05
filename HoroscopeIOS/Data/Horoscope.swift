@@ -28,9 +28,23 @@ let horoArray = [
     Horoscope(nombre: "Capricornio",fechas: "22 de diciembre al 19 de enero", imageName: "capricornio"),
 ]
 
+struct DataResponse:Codable {
+    let date: String
+    let horoData:String
+}
+struct ApiData:Codable {
+    let data:DataResponse
+    let status:Int
+    let success:Bool
+}
 
 
-
+func performAPICall(name:String) async throws -> ApiData {
+    let url = URL(string: "https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?sign=\(name)&day=TODAY")!
+    let (data, _) = try await URLSession.shared.data(from: url)
+    let apiData = try JSONDecoder().decode(ApiData.self, from: data)
+    return apiData.data
+}
 
 
 
