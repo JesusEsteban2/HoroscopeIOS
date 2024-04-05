@@ -7,7 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            let model = horoArray[indexPath.row]
+            print("CELL: \(model.nombre)")
+        }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         horoArray.count
@@ -27,7 +32,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     
-    private let devicesTableView: UITableView = {
+    private let horoscopoTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
@@ -36,17 +41,18 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        devicesTableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
-        devicesTableView.rowHeight=64
-        devicesTableView.backgroundColor = .blue
-        devicesTableView.dataSource = self
-        view.addSubview(devicesTableView)
+        horoscopoTableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
+        horoscopoTableView.rowHeight=64
+        horoscopoTableView.backgroundColor = .blue
+        horoscopoTableView.dataSource = self
+        horoscopoTableView.delegate = self
+        view.addSubview(horoscopoTableView)
          
          NSLayoutConstraint.activate([
-             devicesTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-             devicesTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-             devicesTableView.topAnchor.constraint(equalTo: view.topAnchor),
-             devicesTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+             horoscopoTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+             horoscopoTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+             horoscopoTableView.topAnchor.constraint(equalTo: view.topAnchor),
+             horoscopoTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
          ])
      }
 
