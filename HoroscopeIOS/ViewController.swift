@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         horoArray.count
     }
@@ -15,14 +16,14 @@ class ViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
                 
-                let model = horoArray[indexPath.row]
+        let model = horoArray[indexPath.row]
                 
-                var listContentConfiguration = UIListContentConfiguration.cell()
-                //listContentConfiguration.image = UImage(ImageResource (resource: name:model.imageName))
-                listContentConfiguration.image = UIImage(named: model.imageName)
-                listContentConfiguration.text = model.nombre
-                cell.contentConfiguration = listContentConfiguration
-                return cell
+        var listContentConfiguration = UIListContentConfiguration.cell()
+        listContentConfiguration.image = UIImage(named: model.imageName)
+        listContentConfiguration.text = model.nombre
+        listContentConfiguration.secondaryText = model.fechas
+        cell.contentConfiguration = listContentConfiguration
+        return cell
     }
     
     

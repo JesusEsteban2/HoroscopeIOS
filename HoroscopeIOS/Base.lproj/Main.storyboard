@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-48.091603053435115" y="3.5211267605633805"/>
         </scene>
-        <!--Pantalla 1-->
+        <!--Horoscopo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HoroscopeIOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -47,7 +47,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Pantalla 1" id="ibC-xu-6Fy">
+                    <navigationItem key="navigationItem" title="Horoscopo" id="ibC-xu-6Fy">
                         <barButtonItem key="backBarButtonItem" title="-" id="D32-FQ-nqB"/>
                     </navigationItem>
                 </viewController>
