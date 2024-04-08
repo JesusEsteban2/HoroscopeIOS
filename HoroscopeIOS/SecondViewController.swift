@@ -8,21 +8,30 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    @IBOutlet weak var nombre: UILabel!
+    @IBOutlet weak var fechas: UILabel!
+    @IBOutlet weak var image: UIImageView!
     
-    var param1:String?=nil
-    
-    @IBOutlet weak var hola: UILabel!
+    var horoParam:Horoscope?=nil
     
 
     
-    override func viewDidLoad() {
+    
+    
+    override func viewDidLoad()  {
         super.viewDidLoad()
-
-         hola.text=param1
+        
+        nombre.text=horoParam?.nombre
+        fechas.text=horoParam?.fechas
+        image.image = UIImage(named: horoParam!.imageName)
         
     }
     
-
+    
+    
+    // let texto=try performAPICall(name:horoParam!.nombre)
+    
+    
     /*
     // MARK: - Navigation
 

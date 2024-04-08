@@ -49,18 +49,17 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         model.count
         }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        filaGen=model[indexPath.row]
-        print("Has seleccionado: \(filaGen.nombre)")
-        
-    }
     
     @IBSegueAction func nav(_ coder: NSCoder, sender: Any?) -> SecondViewController? {
+        
+        let fila=tableView.indexPathForSelectedRow
+        filaGen=model[fila!.row]
         
         print("Has pasado: \(filaGen.nombre)")
         let viewController = SecondViewController(coder: coder)
         
-        viewController?.param1=filaGen.nombre
+        
+        viewController?.horoParam=filaGen
         
         return viewController
     }
