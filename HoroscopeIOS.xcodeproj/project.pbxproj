@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6C3322BD2BBFDB08002794D2 /* Horoscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3322BC2BBFDB08002794D2 /* Horoscope.swift */; };
+		6CAF7F892BC3E4470042BF5F /* Notas.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6CAF7F882BC3E4470042BF5F /* Notas.txt */; };
 		6CBEE27B2BBEB115006F71B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBEE27A2BBEB115006F71B0 /* AppDelegate.swift */; };
 		6CBEE27D2BBEB115006F71B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBEE27C2BBEB115006F71B0 /* SceneDelegate.swift */; };
 		6CBEE27F2BBEB115006F71B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBEE27E2BBEB115006F71B0 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		6C3322BC2BBFDB08002794D2 /* Horoscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horoscope.swift; sourceTree = "<group>"; };
+		6CAF7F882BC3E4470042BF5F /* Notas.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notas.txt; sourceTree = "<group>"; };
 		6CBEE2772BBEB115006F71B0 /* HoroscopeIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoroscopeIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CBEE27A2BBEB115006F71B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CBEE27C2BBEB115006F71B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 			isa = PBXGroup;
 			children = (
 				6C3322BC2BBFDB08002794D2 /* Horoscope.swift */,
+				6CAF7F882BC3E4470042BF5F /* Notas.txt */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CAF7F892BC3E4470042BF5F /* Notas.txt in Resources */,
 				6CBEE2842BBEB116006F71B0 /* Assets.xcassets in Resources */,
 				6CBEE2872BBEB116006F71B0 /* Base in Resources */,
 				6CBEE2822BBEB115006F71B0 /* Base in Resources */,

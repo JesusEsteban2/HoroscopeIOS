@@ -39,11 +39,11 @@ struct ApiData:Codable {
 }
 
 
-func performAPICall(name:String) async throws -> ApiData {
+func performAPICall(name:String) async throws -> String {
     let url = URL(string: "https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?sign=\(name)&day=TODAY")!
     let (data, _) = try await URLSession.shared.data(from: url)
     let apiData = try JSONDecoder().decode(ApiData.self, from: data)
-    return apiData.data
+    return apiData.data.horoData
 }
 
 
