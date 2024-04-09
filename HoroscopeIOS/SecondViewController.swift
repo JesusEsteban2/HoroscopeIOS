@@ -11,16 +11,30 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var nombre: UILabel!
     @IBOutlet weak var fechas: UILabel!
     @IBOutlet weak var image: UIImageView!
+    @IBOutlet var texto: UILabel!
+    
+    @IBOutlet weak var noFav: UIImageView!
+    @IBOutlet weak var favImage: UIImageView!
     
     var horoParam:Horoscope?=nil
     
-
     
     
     
     override func viewDidLoad()  {
         super.viewDidLoad()
+        var nom:String?=""
         
+        Task{
+            do {
+                try await nom = performAPICall(name:horoParam!.imageName)
+                print ("pronostico recibido: \(nom!)")
+                texto.text=nom
+            }   catch { print ("No se ha podido conectar")
+            }
+        }
+        
+
         nombre.text=horoParam?.nombre
         fechas.text=horoParam?.fechas
         image.image = UIImage(named: horoParam!.imageName)
@@ -29,7 +43,8 @@ class SecondViewController: UIViewController {
     
     
     
-    // let texto=try performAPICall(name:horoParam!.nombre)
+    
+    
     
     
     /*

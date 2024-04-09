@@ -55,7 +55,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         let fila=tableView.indexPathForSelectedRow
         filaGen=model[fila!.row]
         
-        print("Has pasado: \(filaGen.nombre)")
+        // print("Has pasado: \(filaGen.nombre)")
         let viewController = SecondViewController(coder: coder)
         
         
