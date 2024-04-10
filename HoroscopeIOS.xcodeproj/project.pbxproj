@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6C3322BD2BBFDB08002794D2 /* Horoscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3322BC2BBFDB08002794D2 /* Horoscope.swift */; };
 		6CAF7F892BC3E4470042BF5F /* Notas.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6CAF7F882BC3E4470042BF5F /* Notas.txt */; };
+		6CB56BA02BC67E70006BC6B0 /* DataDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB56B9F2BC67E70006BC6B0 /* DataDefault.swift */; };
+		6CB56BA22BC69398006BC6B0 /* HoroscopeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB56BA12BC69398006BC6B0 /* HoroscopeCell.swift */; };
 		6CBEE27B2BBEB115006F71B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBEE27A2BBEB115006F71B0 /* AppDelegate.swift */; };
 		6CBEE27D2BBEB115006F71B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBEE27C2BBEB115006F71B0 /* SceneDelegate.swift */; };
 		6CBEE27F2BBEB115006F71B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBEE27E2BBEB115006F71B0 /* ViewController.swift */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		6C3322BC2BBFDB08002794D2 /* Horoscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horoscope.swift; sourceTree = "<group>"; };
 		6CAF7F882BC3E4470042BF5F /* Notas.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notas.txt; sourceTree = "<group>"; };
+		6CB56B9F2BC67E70006BC6B0 /* DataDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDefault.swift; sourceTree = "<group>"; };
+		6CB56BA12BC69398006BC6B0 /* HoroscopeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeCell.swift; sourceTree = "<group>"; };
 		6CBEE2772BBEB115006F71B0 /* HoroscopeIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoroscopeIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CBEE27A2BBEB115006F71B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CBEE27C2BBEB115006F71B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,8 +48,10 @@
 		6C3322BB2BBFDADF002794D2 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				6CB56B9F2BC67E70006BC6B0 /* DataDefault.swift */,
 				6C3322BC2BBFDB08002794D2 /* Horoscope.swift */,
 				6CAF7F882BC3E4470042BF5F /* Notas.txt */,
+				6CB56BA12BC69398006BC6B0 /* HoroscopeCell.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -163,8 +169,10 @@
 				6C3322BD2BBFDB08002794D2 /* Horoscope.swift in Sources */,
 				6CBEE28F2BBEB17B006F71B0 /* SecondViewController.swift in Sources */,
 				6CBEE27F2BBEB115006F71B0 /* ViewController.swift in Sources */,
+				6CB56BA02BC67E70006BC6B0 /* DataDefault.swift in Sources */,
 				6CBEE27B2BBEB115006F71B0 /* AppDelegate.swift in Sources */,
 				6CBEE27D2BBEB115006F71B0 /* SceneDelegate.swift in Sources */,
+				6CB56BA22BC69398006BC6B0 /* HoroscopeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

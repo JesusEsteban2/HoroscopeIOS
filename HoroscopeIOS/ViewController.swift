@@ -11,36 +11,32 @@ import UIKit
 class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     
-    
-    
     @IBOutlet var tableView: UITableView!
     
+    let defa=DataDefault()
+    var isFav=false
+
     let model=horoArray
     var filaGen:Horoscope=horoArray[0]
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.dataSource = self
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "standarCell", for:indexPath)
+        let cell:HoroscopeCell = tableView.dequeueReusableCell(withIdentifier: "standarCell", for:indexPath) as! HoroscopeCell
         
-        
-        var listContentConfiguration = UIListContentConfiguration.cell()
         let fila = model[indexPath.row]
         
-        
-        listContentConfiguration.image = UIImage(named: fila.imageName)
-        listContentConfiguration.text = fila.nombre
-        listContentConfiguration.secondaryText = fila.fechas
-            
-        cell.contentConfiguration = listContentConfiguration
+        cell.render(ima: fila.imageName, tit: fila.nombre, subtit: fila.fechas, fav: defa.defaultRead(key:indexPath.row))
         
         return cell
         }
@@ -60,6 +56,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         
         
         viewController?.horoParam=filaGen
+        viewController?.fila=fila!.row
         
         return viewController
     }
